@@ -130,8 +130,7 @@
             const projet = document.getElementById('projet').value;
             const message = document.getElementById('message').value;
             
-            // 2. CONFIGURATION : Mettez votre numéro WhatsApp ici (sans +, sans espace)
-            // Exemple pour la RDC : 243 suivi du numéro local (ex: 243812345678)
+            // 2. CONFIGURATION : Numéro WhatsApp
             const numeroTelephone = "243910682301"; 
             
             // 3. Structure du texte du message
@@ -141,14 +140,13 @@
                                  `• *Type de projet* : ${projet}\n` +
                                  `• *Détails* : ${message}`;
             
-            // 4. Lien API WhatsApp officiel
-            const urlWhatsApp = `https://whatsapp.com{numeroTelephone}&text=${encodeURIComponent(texteWhatsApp)}`;
+            // 4. Correction du lien avec l'API officielle wa.me et le symbole '$' manquant
+            const urlWhatsApp = `https://wa.me{numeroTelephone}?text=${encodeURIComponent(texteWhatsApp)}`;
             
-            // 5. Ouverture automatique de WhatsApp dans un nouvel onglet
+            // 5. Ouverture de WhatsApp
             window.open(urlWhatsApp, '_blank');
         }
     </script>
 
 </body>
 </html>
-

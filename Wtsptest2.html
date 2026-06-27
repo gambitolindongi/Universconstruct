@@ -142,7 +142,8 @@
             
             // 4. Correction du lien avec l'API officielle wa.me et le symbole '$' manquant
             const urlWhatsApp = `https://wa.me{numeroTelephone}?text=${encodeURIComponent(texteWhatsApp)}`;
-            
+            const urlWhatsApp = `https://wa.me{numeroTelephone}?text=${encodeURIComponent(texteWhatsApp)}`;
+
             // 5. Ouverture de WhatsApp
             window.open(urlWhatsApp, '_blank');
         }

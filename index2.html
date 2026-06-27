@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIVERS CONSTRUCTION | L'excellence constructive en RDC</title>
+    <link rel="stylesheet" href="style50.css">
+    
+    <style>
+        /* Style du bouton flottant WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 14px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            z-index: 9999; /* Reste toujours au-dessus du contenu */
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+
+        /* Effet au survol */
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.05);
+        }
+
+        /* Adaptation pour les petits écrans de téléphones */
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- RUBAN SUPÉRIEUR PERMANENT (STYLE CSTB) -->
+    <nav class="cstb-ribbon">
+        <div class="cstb-logo-zone">
+            <a href="#" class="cstb-logo-title">Univers Construction</a>
+        </div>
+        <div class="cstb-nav-zone">
+            <a href="#" class="cstb-nav-link">Expertise</a>
+            <a href="#" class="cstb-nav-link">Nos Offres</a>
+            <a href="#devis-form" class="cstb-btn-connect">Demander un devis</a>
+        </div>
+    </nav>
+
+    <!-- GRID 1: EN-TÊTE -->
+    <header class="grid-1">
+        <div class="hero-content">
+            <h1 class="hero-title">Bâtir l'avenir, concevoir l'excellence en RDC</h1>
+            <p class="hero-subtitle">Architecture innovante et design d'intérieur d'exception.</p>
+        </div>
+      
+        <a href="#devis-form" style="text-decoration: none;">
+            <button class="btn-send">Demander un devis</button>
+        </a>
+    </header>
+
+    <!-- GRID 2: PANNEAUX GLISSANTS (5 CARTES) -->
+    <section class="grid-2">
+        <h2 class="section-title">Nos Domaines d'Expertise</h2>
+        <div class="swipe-carousel">
+            <!-- Carte 1 -> Études de terrains -->
+            <a href="univetdterrain.html" class="swipe-link">
+                <div class="swipe-card card-clr-1">
+                    <h3>01</h3>
+                    <h4>Études de terrains</h4>
+                    <p>Analyses topographiques précises et sondages de sols pour sécuriser vos fondations avant toute construction en RDC.</p>
+                </div>
+            </a>
+            
+            <!-- Carte 2 -> Plans architecturaux -->
+            <a href="univarchi.html" class="swipe-link">
+                <div class="swipe-card card-clr-2">
+                    <h3>02</h3>
+                    <h4>Plans architecturaux</h4>
+                    <p>Conception de plans 2D/3D sur-mesure alliant modernité, optimisation de l'espace et respect des normes urbanistiques.</p>
+                </div>
+            </a>
+            
+            <!-- Carte 3 -> Décoration intérieure -->
+            <a href="univdesign.html" class="swipe-link">
+                <div class="swipe-card card-clr-3">
+                    <h3>03</h3>
+                    <h4>Décoration intérieure</h4>
+                    <p>Aménagement d'espaces de vie et professionnels uniques. Choix des textures, mobiliers et jeux de lumière.</p>
+                </div>
+            </a>
+            
+            <!-- Carte 4 -> Rénovation & Finitions -->
+            <a href="univfinition.html" class="swipe-link">
+                <div class="swipe-card card-clr-4">
+                    <h3>04</h3>
+                    <h4>Rénovation & Finitions</h4>
+                    <p>Modernisation de bâtiments anciens et travaux de second œuvre exécutés avec une rigueur technique absolue.</p>
+                </div>
+            </a>
+
+            <!-- Carte 5 -> Suivi de chantier -->
+            <a href="univchantier.html" class="swipe-link">
+                <div class="swipe-card card-clr-5">
+                    <h3>05</h3>
+                    <h4>Suivi de chantier</h4>
+                    <p>Supervision rigoureuse des travaux, gestion des équipes de maçonnerie et contrôle strict du respect des délais.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- HISTOIRE DE LA SOCIÉTÉ -->
+    <section class="grid-histoire" style="padding: 60px 20px; background: #ffffff; text-align: center;">
+        <h2 class="section-title">Notre Histoire</h2>
+        <p style="max-width: 800px; margin: 0 auto; line-height: 1.6; color: #555555; font-size: 13.5px;">
+            Fondée en RDC par une équipe d'architectes et d'ingénieurs passionnés, <strong style="color: #002F56;">Univers Construction</strong> est née de la volonté de transformer le paysage urbain et d'apporter des solutions d'aménagement intérieur innovantes. En 12 ans d'existence, nous sommes passés d'un petit bureau d'études local à un actor clé du bâtiment, ayant réalisé plus de 150 marchés d'envergure. Notre parcours est guidé par la rigueur technique et le respect des normes architecturales.
+        </p>
+    </section>
+
+    <!-- GRID 3: ÉLÉMENT GRAPHIQUE -->
+    <section class="grid-3">
+        <div class="red-circle">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquet finibus.</p>
+        </div>
+    </section>
+
+    <!-- GRID 4: SLIDER PLEINE LARGEUR (IMAGES CLIQUABLES) -->
+    <section class="grid-4">
+        <h2 class="grid4-title">Nos réalisations</h2>
+        <div class="slider-container">
+            
+            <!-- Réalisation 1 -->
+            <div class="slide">
+                <a href="Nosreal.html" class="slide-link">
+                    <div class="caption">Légende Photo 1</div>
+                    <img src="Image1.jpg" alt="Réalisation 1">
+                </a>
+            </div>
+            
+            <!-- Réalisation 2 -->
+            <div class="slide">
+                <a href="Nosreal.html" class="slide-link">
+                    <div class="caption">Légende Photo 2</div>
+                    <img src="Image2.jpg" alt="Réalisation 2">
+                </a>
+            </div>
+            
+            <!-- Réalisation 3 -->
+            <div class="slide">
+                <a href="Nosreal.html" class="slide-link">
+                    <div class="caption">Légende Photo 3</div>
+                    <img src="Image3.jpg" alt="Réalisation 3">
+                </a>
+            </div>
+            
+            <!-- Réalisation 4 -->
+            <div class="slide">
+                <a href="Nosreal.html" class="slide-link">
+                    <div class="caption">Légende Photo 4</div>
+                    <img src="Image4.jpg" alt="Réalisation 4">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOUTON FLOTTANT WHATSAPP (NUMÉRO ET MESSAGE PRÉ-REMPLI INCLUS) -->
+    <a href="https://wa.me." target="_blank" class="whatsapp-float">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.405.003 12.003.003c3.199.001 6.205 1.244 8.467 3.508 2.261 2.262 3.501 5.27 3.499 8.471-.004 6.657-5.35 12.002-11.95 12.002-1.996-.001-3.955-.5-5.694-1.448L0 24zm6.59-4.846c1.6.95 3.198 1.451 4.811 1.452 5.441 0 9.866-4.425 9.87-9.869.002-2.637-1.019-5.115-2.877-6.974C16.58 1.895 14.105.874 11.472.874 6.035.874 1.611 5.299 1.607 10.74c-.001 1.706.452 3.372 1.31 4.846l-.995 3.633 3.73-.979zm11.513-3.921c-.247-.124-1.465-.723-1.692-.806-.228-.083-.394-.124-.56.124-.165.247-.641.806-.785.969-.145.165-.29.185-.537.062-.247-.124-1.043-.385-1.988-1.227-.735-.656-1.232-1.466-1.377-1.714-.145-.247-.015-.38.109-.503.111-.11.247-.29.372-.434.124-.144.165-.247.248-.412.083-.165.042-.31-.021-.434-.062-.124-.56-1.348-.767-1.847-.201-.484-.406-.418-.56-.426-.144-.007-.31-.009-.475-.009-.165 0-.434.062-.661.309-.227.247-.867.846-.867 2.062 0 1.216.883 2.392.981 2.556.1.165 1.737 2.654 4.209 3.717.588.253 1.048.404 1.407.518.59.187 1.127.161 1.551.098.473-.07 1.465-.598 1.672-1.176.206-.577.206-1.072.144-1.176-.062-.103-.227-.165-.475-.29z"/>
+        </svg>
+        WhatsApp
+    </a>
+
+</body>
+</html>

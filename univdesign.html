@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Univers Design : découvrez notre expertise en architecture d'intérieur, aménagement d'espaces et mobilier sur mesure. Demandez votre devis via WhatsApp.">
+    <meta name="keywords" content="design intérieur, architecture intérieur, aménagement, décoration, rénovation, mobilier sur mesure, univers design">
+    <meta name="author" content="Univers Design">
+    <title>Architecture d'Intérieur & Design | Univers Design</title>
+    <!-- Liaison avec le fichier CSS optimisé -->
+    <link rel="stylesheet" href="styleb4x.css">
+</head>
+<body>
+
+    <header>
+        <h1>Univers Design</h1>
+        <p>Création d'espaces inspirants et aménagement d'intérieurs sur mesure</p>
+    </header>
+
+    <div class="container">
+        
+        <section id="histoire">
+            <h2>Notre Approche</h2>
+            <div class="story-text">
+                <p>Avant de dessiner les premiers plans, comprendre votre mode de vie et vos aspirations est l'étape la plus critique pour garantir la réussite de votre projet. Univers Design met à votre disposition son département d'architecture et de design d'intérieur. Grâce à des visuels 3D photoréalistes et une expertise des matériaux éprouvée, nous analysons les volumes, la lumière naturelle et la circulation de vos pièces pour sublimer vos futurs espaces.</p>
+                <p>Chaque intérieur cache un potentiel unique invisible au premier coup d'œil : optimisation des zones perdues, harmonisation des teintes ou intégration de rangements intelligents. Notre équipe réalise des métrés précis et des planches de tendances pour lever toutes vos incertitudes techniques. Nous collaborons étroitement avec les artisans et les particuliers pour fournir des plans clairs, exploitables et parfaitement adaptés à votre budget.</p>
+            </div>
+        </section>
+
+        <section id="realisations">
+            <h2>Nos Interventions Récentes</h2>
+            
+            <div class="projects-grid">
+                <!-- Intervention 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Image4.jpg" alt="Rénovation et design intérieur de salon - Univers Design">
+                    </div>
+                    <div class="project-info">
+                        <h3>Aménagement Complet de Villa</h3>
+                        <p class="project-history"><strong>Historique de réalisation :</strong> Conception architecturale et sélection de mobilier pour un espace de vie de 120m². Nos propositions ont permis de restructurer les cloisons pour créer une cuisine ouverte moderne, optimisant ainsi la lumière naturelle et valorisant le patrimoine immobilier.</p>
+                    </div>
+                </div>
+
+                <!-- Intervention 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Image2.jpg" alt="Modélisation 3D cuisine haut de gamme - Univers Design">
+                    </div>
+                    <div class="project-info">
+                        <h3>Modélisation 3D & Mobilier Sur Mesure</h3>
+                        <p class="project-history"><strong>Historique de réalisation :</strong> Conception complète d'une suite parentale avec dressing intégré sous combles. Utilisation de logiciels de rendus photoréalistes pour générer une immersion complète de l'espace en seulement 48 heures avant le lancement de la fabrication.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="devis">
+            <h2>Demande de Projet de Design</h2>
+            <form id="etudeForm">
+                <div class="form-group">
+                    <label for="nom">Nom Complet ou Entreprise</label>
+                    <input type="text" id="nom" required placeholder="Ex: Studio Horizon ou Marie Dupont">
+                </div>
+                <div class="form-group">
+                    <label for="type_etude">Type de Prestation</label>
+                    <select id="type_etude" required>
+                        <option value="">Sélectionnez une option</option>
+                        <option value="Architecture d'Intérieur Complète">Architecture d'Intérieur (Plans & Suivi)</option>
+                        <option value="Modélisation 3D & Planches Tendances">Modélisation 3D & Planches Tendances</option>
+                        <option value="Aménagement et Mobilier Sur Mesure">Aménagement de pièce (Cuisine / Dressing)</option>
+                        <option value="Conseil Déco & Couleurs Avant-Projet">Conseil Déco & Shopping List</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="localisation">Localisation du projet</label>
+                    <input type="text" id="localisation" required placeholder="Ex: Ville, Quartier ou Code postal">
+                </div>
+                <div class="form-group">
+                    <label for="message">Détails de votre projet d'intérieur</label>
+                    <textarea id="message" rows="5" required placeholder="Décrivez votre projet (type de pièce, style souhaité, budget approximatif, contraintes d'espace...)"></textarea>
+                </div>
+                <button type="submit">Demander mon étude sur WhatsApp</button>
+            </form>
+        </section>
+
+    </div>
+
+    <!-- Script JavaScript pour l'envoi WhatsApp -->
+    <script>
+        document.getElementById('etudeForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Indiquez votre numéro WhatsApp au format international (sans le + ni les 00)
+            const numeroWhatsApp = 'XXXXXXXXXX'; 
+            
+            const nom = document.getElementById('nom').value;
+            const prestation = document.getElementById('type_etude').value;
+            const localite = document.getElementById('localisation').value;
+            const description = document.getElementById('message').value;
+            
+            const messageTexte = `Bonjour Univers Design,\n\n` +
+                                 `Je souhaite planifier un projet de design d'intérieur :\n\n` +
+                                 `• *Client :* ${nom}\n` +
+                                 `• *Prestation :* ${prestation}\n` +
+                                 `• *Localisation :* ${localite}\n` +
+                                 `• *Projet prévu :* ${description}`;
+            
+            const messageEncode = encodeURIComponent(messageTexte);
+            const urlWhatsApp = `https://wa.me{numeroWhatsApp}?text=${messageEncode}`;
+            
+            window.open(urlWhatsApp, '_blank');
+        });
+    </script>
+
+</body>
+</html>

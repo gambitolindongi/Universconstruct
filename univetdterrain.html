@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Univers Construction : découvrez notre expertise en étude de terrain, analyses de sol et relevés topographiques. Demandez votre devis via WhatsApp.">
+    <meta name="keywords" content="étude de terrain, analyse de sol, géotechnique, topographie, bornage, fondations, univers construction">
+    <meta name="author" content="Univers Construction">
+    <title>Étude de Terrain & Analyse de Sol | Univers Construction</title>
+    <!-- Liaison avec le fichier CSS optimisé -->
+    <link rel="stylesheet" href="styleb4x.css">
+</head>
+<body>
+
+    <header>
+        <h1>Univers Construction</h1>
+        <p>Expertise géotechnique et préparation durable de vos sols</p>
+    </header>
+
+    <div class="container">
+        
+        <section id="histoire">
+            <h2>Notre Approche</h2>
+            <div class="story-text">
+                <p>Avant de poser la première pierre, comprendre la nature de votre sol est l'étape la plus critique pour garantir la pérennité de votre ouvrage. Univers Construction met à votre disposition son département d'ingénierie et d'étude de terrain. Grâce à des outils de pointe et une expertise de terrain éprouvée, nous analysons la composition, la portance et les spécificités hydrogéologiques de vos parcelles pour sécuriser vos futures fondations.</p>
+                <p>Chaque terrain cache des réalités invisibles à l'œil nu : présence d'argiles gonflantes, nappes de surface ou remblais instables. Notre équipe réalise des sondages précis et des essais in situ pour lever tous les risques constructifs. Nous collaborons étroitement avec les maîtres d'œuvre et les particuliers pour fournir des rapports clairs, exploitables et parfaitement conformes aux normes techniques en vigueur.</p>
+            </div>
+        </section>
+
+        <section id="realisations">
+            <h2>Nos Interventions Récentes</h2>
+            
+            <div class="projects-grid">
+                <!-- Intervention 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Image4.jpg" alt="Sondage géotechnique pour maison individuelle - Univers Construction">
+                    </div>
+                    <div class="project-info">
+                        <h3>Étude G2 pour Maison Individuelle</h3>
+                        <p class="project-history"><strong>Historique de réalisation :</strong> Campagne de sondages pressiométriques et pénétrométriques sur un terrain argileux de 800m². Nos conclusions ont permis d'adapter les fondations initiales vers des micropieux, évitant ainsi de futurs sinistres structurels majeurs et des fissures de façade.</p>
+                    </div>
+                </div>
+
+                <!-- Intervention 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Image2.jpg" alt="Relevé topographique par drone et station - Univers Construction">
+                    </div>
+                    <div class="project-info">
+                        <h3>Relevé Topographique & Bornage</h3>
+                        <p class="project-history"><strong>Historique de réalisation :</strong> Cartographie complète d'une parcelle en forte pente destinée à recevoir un complexe résidentiel. Utilisation combinée d'une station totale et d'un drone pour générer un modèle numérique de terrain (MNT) ultra-précis en seulement 48 heures.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="devis">
+            <h2>Demande d'Étude de Terrain</h2>
+
+            <form id="devisForm">
+                <div class="form-group">
+                    <label for="nom">Nom Complet</label>
+                    <input type="text" id="nom" required placeholder="Ex: Jean Dupont">
+                </div>
+                <div class="form-group">
+                    <label for="travaux">Type de Travaux</label>
+                    <select id="type_etude" required>
+                        <option value="">Sélectionnez une option</option>
+                        <option value="Étude Géotechnique (G1 / G2)">Étude Géotechnique (G1 / G2)</option>
+                        <option value="Relevé Topographique & Altis">Relevé Topographique & Altimétrique</option>
+                        <option value="Analyse et Sondage de Sol Unique">Analyse de sol (Pollution / Portance)</option>
+                        <option value="Conseil Fondations Avant-Projet">Conseil Fondations Avant-Projet</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Description détaillée de votre projet</label>
+                    <textarea id="message" rows="5" required placeholder="Décrivez votre projet (superficie, matériaux souhaités, délais...)"></textarea>
+                </div>
+                <!-- Correction : Bouton correctement fermé -->
+                <button type="submit">Demander mon devis sur WhatsApp</button>
+            </form>
+        </section>
+
+    </div>
+
+    <!-- Script JavaScript pour l'envoi WhatsApp -->
+    <script>
+        document.getElementById('etudeForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Indiquez votre numéro WhatsApp au format international (sans le +)
+            const numeroWhatsApp = 'XXXXXXXXXX'; 
+            
+            const nom = document.getElementById('nom').value;
+            const prestation = document.getElementById('type_etude').value;
+            const localite = document.getElementById('localisation').value;
+            const description = document.getElementById('message').value;
+            
+            const messageTexte = `Bonjour Univers Construction,\n\n` +
+                                 `Je souhaite planifier une étude de terrain :\n\n` +
+                                 `• *Client :* ${nom}\n` +
+                                 `• *Prestation :* ${prestation}\n` +
+                                 `• *Localisation :* ${localite}\n` +
+                                 `• *Projet prévu :* ${description}`;
+            
+            const messageEncode = encodeURIComponent(messageTexte);
+            const urlWhatsApp = `https://wa.me{numeroWhatsApp}?text=${messageEncode}`;
+            
+            window.open(urlWhatsApp, '_blank');
+        });
+    </script>
+
+</body>
+</html>

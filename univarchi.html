@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Univers Plans : découvrez notre expertise en conception de plans architecturaux, modélisation 2D/3D et dossiers de permis de construire. Demandez votre devis via WhatsApp.">
+    <meta name="keywords" content="plan architectural, plan de maison, permis de construire, plan 2D 3D, dessin architecture, univers plans">
+    <meta name="author" content="Univers Plans">
+    <title>Conception de Plans Architecturaux | Univers Plans</title>
+    <!-- Liaison avec le fichier CSS optimisé -->
+    <link rel="stylesheet" href="styleb4x.css">
+</head>
+<body>
+
+    <header>
+        <h1>Univers Plans</h1>
+        <p>Conception architecturale sur mesure et modélisation de vos futurs espaces</p>
+    </header>
+
+    <div class="container">
+        
+        <section id="histoire">
+            <h2>Notre Approche</h2>
+            <div class="story-text">
+                <p>Avant de lancer le chantier, matérialiser vos idées sur papier est l'étape la plus critique pour garantir la faisabilité de votre ouvrage. Univers Plans met à votre disposition son bureau d'études et de dessin architectural. Grâce à des logiciels de CAO de pointe et une expertise réglementaire éprouvée, nous analysons vos besoins, les règles d'urbanisme et l'optimisation des volumes pour concevoir vos futurs plans de construction.</p>
+                <p>Chaque projet cache des contraintes invisibles au premier croquis : alignements obligatoires, orientations solaires ou réglementations thermiques. Notre équipe réalise des plans de masse précis et des coupes techniques pour lever tous les risques de refus administratif. Nous collaborons étroitement avec les maîtres d'œuvre et les particuliers pour fournir des dossiers clairs, exploitables et parfaitement conformes aux normes d'urbanisme en vigueur.</p>
+            </div>
+        </section>
+
+        <section id="realisations">
+            <h2>Nos Interventions Récentes</h2>
+            
+            <div class="projects-grid">
+                <!-- Intervention 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Image4.jpg" alt="Conception de plan de maison moderne - Univers Plans">
+                    </div>
+                    <div class="project-info">
+                        <h3>Dossier de Permis pour Maison Individuelle</h3>
+                        <p class="project-history"><strong>Historique de réalisation :</strong> Conception complète des plans d'architecte (façades, toitures, coupes) pour une villa contemporaine de 180m². Nos optimisations d'agencement ont permis de maximiser l'espace habitable tout en garantissant une validation du permis de construire du premier coup en mairie.</p>
+                    </div>
+                </div>
+
+                <!-- Intervention 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Image2.jpg" alt="Modélisation 3D et plan de masse - Univers Plans">
+                    </div>
+                    <div class="project-info">
+                        <h3>Plan d'Extension & Modélisation 3D</h3>
+                        <p class="project-history"><strong>Historique de réalisation :</strong> Dessin technique pour l'extension de 50m² d'un bâtiment existant avec création d'un étage. Utilisation de logiciels de modélisation 3D pour simuler l'intégration parfaite de la nouvelle structure avec l'ancienne en seulement 48 heures.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="devis">
+            <h2>Demande de Plans Architecturaux</h2>
+            <form id="etudeForm">
+                <div class="form-group">
+                    <label for="nom">Nom Complet ou Entreprise</label>
+                    <input type="text" id="nom" required placeholder="Ex: SCI Horizon ou Marc l'Ingénieur">
+                </div>
+                <div class="form-group">
+                    <label for="type_etude">Type de Prestation</label>
+                    <select id="type_etude" required>
+                        <option value="">Sélectionnez une option</option>
+                        <option value="Plans complets pour Permis de Construire">Plans complets (Permis de Construire)</option>
+                        <option value="Conception 2D / 3D Avant-Projet">Modélisation 3D & Plans d'Avant-Projet</option>
+                        <option value="Plan de Modification ou Extension">Plan d'Extension ou de Rénovation</option>
+                        <option value="Régularisation de plans existants">Mise au propre / Numérisation de plans</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="localisation">Localisation du projet</label>
+                    <input type="text" id="localisation" required placeholder="Ex: Ville, Code postal ou zone d'urbanisme">
+                </div>
+                <div class="form-group">
+                    <label for="message">Détails de votre projet architectural</label>
+                    <textarea id="message" rows="5" required placeholder="Décrivez votre projet (type de bâtiment, nombre de pièces, niveaux prévus, contraintes du terrain, style moderne/traditionnel...)"></textarea>
+                </div>
+                <button type="submit">Demander mon étude sur WhatsApp</button>
+            </form>
+        </section>
+
+    </div>
+
+    <!-- Script JavaScript pour l'envoi WhatsApp -->
+    <script>
+        document.getElementById('etudeForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Indiquez votre numéro WhatsApp au format international (sans le + ni les 00)
+            const numeroWhatsApp = 'XXXXXXXXXX'; 
+            
+            const nom = document.getElementById('nom').value;
+            const prestation = document.getElementById('type_etude').value;
+            const localite = document.getElementById('localisation').value;
+            const description = document.getElementById('message').value;
+            
+            const messageTexte = `Bonjour Univers Plans,\n\n` +
+                                 `Je souhaite planifier un projet de plans architecturaux :\n\n` +
+                                 `• *Client :* ${nom}\n` +
+                                 `• *Prestation :* ${prestation}\n` +
+                                 `• *Localisation :* ${localite}\n` +
+                                 `• *Projet prévu :* ${description}`;
+            
+            const messageEncode = encodeURIComponent(messageTexte);
+            const urlWhatsApp = `https://wa.me{numeroWhatsApp}?text=${messageEncode}`;
+            
+            window.open(urlWhatsApp, '_blank');
+        });
+    </script>
+
+</body>
+</html>

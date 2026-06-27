@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Univers Construction - Demande de Devis</title>
+    <style>
+        /* Design simple, moderne et adapté aux mobiles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form-container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        h2 {
+            color: #0b3c5d;
+            margin-top: 0;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        textarea {
+            resize: vertical;
+            height: 120px;
+        }
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            transition: background 0.3s ease;
+        }
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Demande de Devis Gratuit</h2>
+        
+        <!-- FORMULAIRE AVEC L'ACTION ONSUBMIT EFFECTIVE -->
+        <form onsubmit="envoyerDevisWhatsApp(event)">
+            
+            <div class="form-group">
+                <label for="nom">Votre Nom Complet :</label>
+                <input type="text" id="nom" placeholder="Ex: Jean Mukendi" required>
+            </div>
+
+            <div class="form-group">
+                <label for="projet">Type de Projet :</label>
+                <select id="projet" required>
+                    <option value="" disabled selected>Choisissez une option...</option>
+                    <option value="Construction de maison">Construction de maison</option>
+                    <option value="Rénovation / Aménagement">Rénovation / Aménagement</option>
+                    <option value="Gros œuvre / Maçonnerie">Gros œuvre / Maçonnerie</option>
+                    <option value="Plans d'architecte">Plans d'architecte</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Détails de votre projet :</label>
+                <textarea id="message" placeholder="Décrivez votre besoin (dimensions, lieu en RDC, budget...)" required></textarea>
+            </div>
+
+            <!-- BOUTON D'ENVOI -->
+            <button type="submit" class="btn-whatsapp">
+                Envoyer ma demande sur WhatsApp
+            </button>
+
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Univers Construction. Tous droits réservés. Conçu pour l'excellence en RDC.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT POUR TRAITER LE FORMULAIRE ET REDIRIGER -->
+    <script>
+        function envoyerDevisWhatsApp(event) {
+            event.preventDefault();
+            
+            // 1. Récupération des valeurs saisies
+            const nom = document.getElementById('nom').value;
+            const projet = document.getElementById('projet').value;
+            const message = document.getElementById('message').value;
+            
+            // 2. CONFIGURATION : Mettez votre numéro WhatsApp ici (sans +, sans espace)
+            // Exemple pour la RDC : 243 suivi du numéro local (ex: 243812345678)
+            const numeroTelephone = "243910682301"; 
+            
+            // 3. Structure du texte du message
+            const texteWhatsApp = `Bonjour Univers Construction,\n\n` +
+                                 `Voici une nouvelle demande de devis :\n` +
+                                 `• *Nom* : ${nom}\n` +
+                                 `• *Type de projet* : ${projet}\n` +
+                                 `• *Détails* : ${message}`;
+            
+            // 4. Lien API WhatsApp officiel
+            const urlWhatsApp = `https://whatsapp.com{numeroTelephone}&text=${encodeURIComponent(texteWhatsApp)}`;
+            
+            // 5. Ouverture automatique de WhatsApp dans un nouvel onglet
+            window.open(urlWhatsApp, '_blank');
+        }
+    </script>
+
+</body>
+</html>
+

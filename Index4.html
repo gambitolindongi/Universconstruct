@@ -1,5 +1,180 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIVERS CONSTRUCTION | L'excellence constructive en RDC</title>
+    <link rel="stylesheet" href="style50.css">
+</head>
+     <style>
+        /* STYLE DU BOUTON WHATSAPP FLOTTANT (FIXÉ EN BAS À DROITE) */
+        .whatsapp-fixed-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        /* Effet au survol du bouton */
+        .whatsapp-fixed-btn:hover {
+            transform: scale(1.1);
+            background-color: #128C7E;
+        }
+
+        /* Icône WhatsApp simplifiée en SVG (Pas besoin de charger une bibliothèque externe) */
+        .whatsapp-icon {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+    </style>
+<body>
+
+    <!-- RUBAN SUPÉRIEUR PERMANENT (STYLE CSTB) -->
+    <nav class="cstb-ribbon">
+        <div class="cstb-logo-zone">
+            <a href="#" class="cstb-logo-title">Univers Construction</a>
+        </div>
+        <div class="cstb-nav-zone">
+            <a href="#" class="cstb-nav-link">Expertise</a>
+            <a href="#" class="cstb-nav-link">Nos Offres</a>
+            <a href="#devis-form" class="cstb-btn-connect">Demander un devis</a>
+        </div>
+    </nav>
+
+    <!-- GRID 1: EN-TÊTE -->
+    <header class="grid-1">
+           <!-- 
+           <div class="card-carousel">
+            <div class="card-track">
+                <div class="trans-card"><p>Nous sommes Univers Construction.</p></div>
+                <div class="trans-card"><p>Solutions à vos problèmes de décors intérieurs.</p></div>
+                <div class="trans-card"><p>Études de terrains & réalisations de plans architecturaux.</p></div>
+            </div>
+        </div>
+        -->
+    <!-- GRID 1: EN-TÊTE -->
+    
+        <div class="hero-content">
+            <h1 class="hero-title">Bâtir l'avenir, concevoir l'excellence en RDC</h1>
+            <p class="hero-subtitle">Architecture innovante et design d'intérieur d'exception.</p>
+        </div>
+      
+    
+
+        <a href="#devis-form" style="text-decoration: none;">
+            <button class="btn-send">Demander un devis</button>
+        </a>
+    </header>
+
+    <!-- GRID 2: PANNEAUX GLISSANTS (CARTES CLIQUABLES ÉPURÉES) -->
+   <!-- <section class="grid-2">
+        <h2 class="section-title">Nos Domaines d'Expertise</h2>
+        <div class="swipe-carousel">
+            <!-- Carte 1 -> Page 1
+            <a href="page1.html" class="swipe-link">
+                <div class="swipe-card">
+                    <h3>01</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                </div>
+            </a>
+            
+            <!-- Carte 2 -> Page 2 
+            <a href="page2.html" class="swipe-link">
+                <div class="swipe-card">
+                    <h3>02</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                </div>
+            </a>
+            
+            <a href="page3.html" class="swipe-link">
+                <div class="swipe-card">
+                    <h3>03</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                </div>
+            </a>
+            
+ carte 4
+            <a href="page4.html" class="swipe-link">
+                <div class="swipe-card">
+                    <h3>04</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+-->
+    <!-- GRID 2: PANNEAUX GLISSANTS (5 CARTES) -->
+    <section class="grid-2">
+        <h2 class="section-title">Nos Domaines d'Expertise</h2>
+        <div class="swipe-carousel">
+            <!-- Carte 1 -> Études de terrains -->
+            <a href="univetdterrain.html" class="swipe-link">
+                <div class="swipe-card card-clr-1">
+                    <h3>01</h3>
+                    <h4>Études de terrains</h4>
+                    <p>Analyses topographiques précises et sondages de sols pour sécuriser vos fondations avant toute construction en RDC.</p>
+                </div>
+            </a>
+            
+            <!-- Carte 2 -> Plans architecturaux -->
+            <a href="univarchi.html" class="swipe-link">
+                <div class="swipe-card card-clr-2">
+                    <h3>02</h3>
+                    <h4>Plans architecturaux</h4>
+                    <p>Conception de plans 2D/3D sur-mesure alliant modernité, optimisation de l'espace et respect des normes urbanistiques.</p>
+                </div>
+            </a>
+            
+            <!-- Carte 3 -> Décoration intérieure -->
+            <a href="univdesign.html" class="swipe-link">
+                <div class="swipe-card card-clr-3">
+                    <h3>03</h3>
+                    <h4>Décoration intérieure</h4>
+                    <p>Aménagement d'espaces de vie et professionnels uniques. Choix des textures, mobiliers et jeux de lumière.</p>
+                </div>
+            </a>
+            
+            <!-- Carte 4 -> Rénovation & Finitions -->
+            <a href="univfinition.html" class="swipe-link">
+                <div class="swipe-card card-clr-4">
+                    <h3>04</h3>
+                    <h4>Rénovation & Finitions</h4>
+                    <p>Modernisation de bâtiments anciens et travaux de second œuvre exécutés avec une rigueur technique absolue.</p>
+                </div>
+            </a>
+
+            <!-- Carte 5 -> Suivi de chantier -->
+            <a href="univchantier.html" class="swipe-link">
+                <div class="swipe-card card-clr-5">
+                    <h3>05</h3>
+                    <h4>Suivi de chantier</h4>
+                    <p>Supervision rigoureuse des travaux, gestion des équipes de maçonnerie et contrôle strict du respect des délais.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
     <!-- HISTOIRE DE LA SOCIÉTÉ -->
+
+
+
+
+
+
+<!-- HISTOIRE DE LA SOCIÉTÉ -->
     <section class="grid-histoire" style="padding: 60px 20px; background: #ffffff; text-align: center;">
         <h2 class="section-title">Notre Histoire</h2>
         <p style="max-width: 800px; margin: 0 auto; line-height: 1.6; color: #555555; font-size: 13.5px;">

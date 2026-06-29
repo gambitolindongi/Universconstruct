@@ -57,6 +57,94 @@
 
         <section id="devis">
             <h2>Demande de Plans Architecturaux</h2>
+
+xxx
+            
+
+    <title>Contact et Projet WhatsApp</title>
+
+
+    <section class="grid-avis" style="padding: 60px 20px; background: #ffffff; text-align: center;">
+        <h2 class="section-title">Passez Votre Devis Gratuitement</h2>
+    
+    
+    <style>
+        /* Styles de base pour rendre le formulaire propre */
+        body { font-family: Arial, sans-serif; max-width: 400px; margin: 20px auto; padding: 10px; }
+        .form-group { margin-bottom: 15px; display: flex; flex-direction: column; }
+        label { font-weight: bold; margin-bottom: 5px; }
+        input, select, textarea { padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
+        button { background-color: #25D366; color: white; border: none; padding: 12px; border-radius: 4px; font-size: 16px; font-weight: bold; cursor: pointer; width: 100%; margin-top: 10px; }
+        button:hover { background-color: #128C7E; }
+    </style>
+
+    
+    
+    <form id="projectForm">
+        <div class="form-group">
+            <label Places for="clientName">Nom complet :</label>
+            <input type="text" id="clientName" placeholder="Ex: Jean Mukendi" required>
+        </div>
+
+        <div class="form-group">
+            <label for="projectType">Type de projet :</label>
+        
+                    <select id="projectType" required style="width: 100%; padding: 12px; border: 1px solid #cccccc; border-radius: 2px; font-family: inherit; background-color: #fff;">
+                        <option value="Décoration intérieure">Décoration intérieure</option>
+                        <option value="Étude de terrain">Étude de terrain</option>
+                        <option value="Plan architectural">Plan architectural</option>
+                        <option value="Construction générale">Construction générale</option>
+                    </select>
+            
+            
+        </div>
+
+        <div class="form-group">
+            <label for="projectDesc">Description du projet :</label>
+            <textarea id="projectDesc" rows="4" placeholder="Décrivez brièvement votre besoin..." required></textarea>
+        </div>
+
+        <!-- Le bouton remplace l'ancien lien texte -->
+        <button type="submit">Envoyer les détails sur WhatsApp</button>
+    </form>
+
+    <script>
+        document.getElementById('projectForm').addEventListener('submit', function(event) {
+            // Empêche le rechargement par défaut de la page
+            event.preventDefault();
+
+            // 1. Récupération des valeurs saisies dans le formulaire
+            const nom = document.getElementById('clientName').value;
+            const typeProjet = document.getElementById('projectType').value;
+            const description = document.getElementById('projectDesc').value;
+
+            // 2. Construction du message d'accueil textuel
+            const message = "Bonjour ! Voici les détails de mon projet :\n\n" +
+                            "*Nom :* " + nom + "\n" +
+                            "*Type :* " + typeProjet + "\n" +
+                            "*Description :* " + description;
+
+            // 3. Encodage du message pour le protocole d'URL
+            const messageEncode = encodeURIComponent(message);
+
+            // 4. Numéro de téléphone cible
+            const telephone = "243906391126";
+
+            // 5. Génération et ouverture du lien dynamique
+            window.location.href = "whatsapp://send?phone=" + telephone + "&text=" + messageEncode;
+        });
+    </script>
+
+
+    </section>
+
+
+      yyyy
+
+
+
+
+            
             <form id="etudeForm">
                 <div class="form-group">
                     <label for="nom">Nom Complet ou Entreprise</label>

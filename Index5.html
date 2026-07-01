@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIVERS CONSTRUCTION | L'excellence constructive en RDC</title>
+    <link rel="stylesheet" href="style50.css">
+</head>
+<body>
+<style>
+        /* STYLE DU BOUTON WHATSAPP FLOTTANT (FIXÉ EN BAS À DROITE) */
+        .whatsapp-fixed-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        /* Effet au survol du bouton */
+        .whatsapp-fixed-btn:hover {
+            transform: scale(1.1);
+            background-color: #128C7E;
+        }
+
+        /* Icône WhatsApp simplifiée en SVG (Pas besoin de charger une bibliothèque externe) */
+        .whatsapp-icon {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+    </style>
+
+    <!-- RUBAN SUPÉRIEUR PERMANENT (STYLE CSTB) -->
+    <nav class="cstb-ribbon">
+        <div class="cstb-logo-zone">
+            <a href="#" class="cstb-logo-title">Univers Construction</a>
+        </div>
+        <div class="cstb-nav-zone">
+            <a href="#" class="cstb-nav-link">Expertise</a>
+            <a href="#" class="cstb-nav-link">Nos Offres</a>
+            <a href="#devis-form" class="cstb-btn-connect">Demander un devis</a>
+        </div>
+    </nav>
+
+    <!-- GRID 1: EN-TÊTE -->
+    <header class="grid-1">
+          
+    <!-- GRID 1: EN-TÊTE -->
+    
+        <div class="hero-content">
+            <h1 class="hero-title">Bâtir l'avenir, concevoir l'excellence en RDC</h1>
+            <p class="hero-subtitle">Architecture innovante et design d'intérieur d'exception.</p>
+        </div>
+      
+    
+
+        <a href="#devis-form" style="text-decoration: none;">
+            <button class="btn-send">Demander un devis</button>
+        </a>
+    </header>
+
+    <!-- GRID 2: PANNEAUX GLISSANTS (5 CARTES) -->
+    <section class="grid-2">
+        <h2 class="section-title">Nos Domaines d'Expertise</h2>
+        <div class="swipe-carousel">
+            <!-- Carte 1 -> Études de terrains -->
+            <a href="univetdterrain.html" class="swipe-link">
+                <div class="swipe-card card-clr-1">
+                    <h3>01</h3>
+                    <h4>Études de terrains</h4>
+                    <p>Analyses topographiques précises et sondages de sols pour sécuriser vos fondations avant toute construction en RDC.</p>
+                </div>
+            </a>
+            
+            <!-- Carte 2 -> Plans architecturaux -->
+            <a href="univarchi.html" class="swipe-link">
+                <div class="swipe-card card-clr-2">
+                    <h3>02</h3>
+                    <h4>Plans architecturaux</h4>
+                    <p>Conception de plans 2D/3D sur-mesure alliant modernité, optimisation de l'espace et respect des normes urbanistiques.</p>
+                </div>
+            </a>
+            
+            <!-- Carte 3 -> Décoration intérieure -->
+            <a href="univdesign.html" class="swipe-link">
+                <div class="swipe-card card-clr-3">
+                    <h3>03</h3>
+                    <h4>Décoration intérieure</h4>
+                    <p>Aménagement d'espaces de vie et professionnels uniques. Choix des textures, mobiliers et jeux de lumière.</p>
+                </div>
+            </a>
+            
+            <!-- Carte 4 -> Rénovation & Finitions -->
+            <a href="univfinition.html" class="swipe-link">
+                <div class="swipe-card card-clr-4">
+                    <h3>04</h3>
+                    <h4>Rénovation & Finitions</h4>
+                    <p>Modernisation de bâtiments anciens et travaux de second œuvre exécutés avec une rigueur technique absolue.</p>
+                </div>
+            </a>
+
+            <!-- Carte 5 -> Suivi de chantier -->
+            <a href="univchantier.html" class="swipe-link">
+                <div class="swipe-card card-clr-5">
+                    <h3>05</h3>
+                    <h4>Suivi de chantier</h4>
+                    <p>Supervision rigoureuse des travaux, gestion des équipes de maçonnerie et contrôle strict du respect des délais.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- HISTOIRE DE LA SOCIÉTÉ -->
+    <section class="grid-histoire" style="padding: 60px 20px; background: #ffffff; text-align: center;">
+        <h2 class="section-title">Notre Histoire</h2>
+        <p style="max-width: 800px; margin: 0 auto; line-height: 1.6; color: #555555; font-size: 13.5px;">
+            Fondée en RDC par une équipe d'architectes et d'ingénieurs passionnés, <strong style="color: #002F56;">Univers Construction</strong> est née de la volonté de transformer le paysage urbain et d'apporter des solutions d'aménagement intérieur innovantes. En 12 ans d'existence, nous sommes passés d'un petit bureau d'études local à un acteur clé du bâtiment, ayant réalisé plus de 150 marchés d'envergure. Notre parcours est guided par la rigueur technique et le respect des normes architecturales.
+        </p>
+    </section>
+
+    <!-- GRID 3: ÉLÉMENT GRAPHIQUE -->
+    <section class="grid-3">
+        <div class="red-circle">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquet finibus.</p>
+        </div>
+    </section>
+
+    <!-- GRID 4: SLIDER PLEINE LARGEUR -->
+<!-- GRID 4: SLIDER PLEINE LARGEUR (IMAGES CLIQUABLES) -->
+    <section class="grid-4">
+        <h2 class="grid4-title">Nos réalisations</h2>
+        <div class="slider-container">
+            
+            <!-- Réalisation 1 -->
+            <div class="slide">
+                <a href="Nosreal.html" class="slide-link">
+                    <div class="caption">Photo prise lors d'une sceance photo au site x</div>
+                    <img src="Image1.jpg" alt="Réalisation 1">
+                </a>
+            </div>
+            
+            <!-- Réalisation 2 -->
+            <div class="slide">
+                <a href="Nosreal.html" class="slide-link">
+                    <div class="caption">Image de la rénovation</div>
+                    <img src="Image2.jpg" alt="Réalisation 2">
+                </a>
+            </div>
+            
+            <!-- Réalisation 3 -->
+            <div class="slide">
+                <a href="Nosreal.html" class="slide-link">
+                    <div class="caption">Photo de la réalisations</div>
+                    <img src="Image3.jpg" alt="Réalisation 3">
+                </a>
+            </div>
+            
+            <!-- Réalisation 4 -->
+            <div class="slide">
+                <a href="Nosreal.html" class="slide-link">
+                    <div class="caption">Réalisation site 2</div>
+                    <img src="Image4.jpg" alt="Réalisation 4">
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- TÉMOIGNAGES CLIENTS -->
+    <section class="grid-avis" style="padding: 60px 20px; background: #ffffff; text-align: center;">
+        <h2 class="section-title">Ce que disent nos clients</h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1000px; margin: 0 auto;">
+            <div style="background: #F5F7F9; padding: 30px 20px; border-radius: 2px; flex: 1; min-width: 280px; text-align: left; border-left: 3px solid #007AD9;">
+                <p style="font-style: italic; color: #555555; font-size: 13.5px;">"Un travail impeccable pour la rénovation de nos bureaux à Kinshasa. Les délais ont été respectés."</p>
+                <h4 style="margin-top: 15px; color: #002F56; font-weight: 600;">- Nzuzi M., Directeur Général</h4>
+            </div>
+            <div style="background: #F5F7F9; padding: 30px 20px; border-radius: 2px; flex: 1; min-width: 280px; text-align: left; border-left: 3px solid #007AD9;">
+                <p style="font-style: italic; color: #555555; font-size: 13.5px;">"Le plan architectural de notre villa était parfait. Univers Construction maîtrise parfaitement son domaine."</p>
+                <h4 style="margin-top: 15px; color: #002F56; font-weight: 600;">- Kabasele T., Particulier</h4>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- GRID 5: INDICATEURS CLÉS CONTRACTÉS (STYLE MINI-MOSAÏQUE CLAIRE) -->
+    <section class="grid-5">
+        <div class="stat-box clr-blue">
+            <span class="stat-number">+150</span>
+            <span class="stat-label">Marchés signés</span>
+        </div>
+        <div class="stat-box clr-red">
+            <span class="stat-number">+12</span>
+            <span class="stat-label">Ans d'expertise</span>
+        </div>
+        <div class="stat-box clr-green">
+            <span class="stat-number">+45</span>
+            <span class="stat-label">Partenaires</span>
+        </div>
+        <div class="stat-box clr-amber">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Certifié RDC</span>
+        </div>
+    </section>
+   
+
+    <!-- FORMULAIRE DE DEVIS VIA WHATSAPP -->
+    <section id="devis-form" style="padding: 60px 20px; background: #F5F7F9; color: #333333; text-align: center;">
+        <div style="max-width: 550px; margin: 0 auto; background: #ffffff; padding: 40px 30px; border-radius: 2px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); text-align: left;">
+            <h2 style="color: #002F56; margin-bottom: 25px; text-align: center; font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: -0.5px;">Demande de Devis Gratuit</h2>
+
+
+  
+    <style>
+        /* Styles de base pour rendre le formulaire propre */
+        body { font-family: Arial, sans-serif; max-width: 400px; margin: 20px auto; padding: 10px; }
+        .form-group { margin-bottom: 15px; display: flex; flex-direction: column; }
+        label { font-weight: bold; margin-bottom: 5px; }
+        input, select, textarea { padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
+        button { background-color: #25D366; color: white; border: none; padding: 12px; border-radius: 4px; font-size: 16px; font-weight: bold; cursor: pointer; width: 100%; margin-top: 10px; }
+        button:hover { background-color: #128C7E; }
+    </style>
+
+
+    
+    <form id="projectForm">
+        <div class="form-group">
+            <label Places for="clientName">Nom complet :</label>
+            <input type="text" id="clientName" placeholder="Ex: Jean Mukendi" required>
+        </div>
+
+        <div class="form-group">
+            <label for="projectType">Type de projet :</label>
+            
+                    <select id="projectType" required style="width: 100%; padding: 12px; border: 1px solid #cccccc; border-radius: 2px; font-family: inherit; background-color: #fff;">
+                        <option value="Décoration intérieure">Décoration intérieure</option>
+                        <option value="Étude de terrain">Étude de terrain</option>
+                        <option value="Plan architectural">Plan architectural</option>
+                        <option value="Construction générale">Construction générale</option>
+                    </select>
+            
+      
+            <select id2="projectType" required>
+                <option value="">-- Choisir une option --</option>
+                <option value="Site Web">Site Web / Application</option>
+                <option value="Design Graphique">Design Graphique</option>
+                <option value="Marketing Digital">Marketing Digital</option>
+                <option value="Autre">Autre projet</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="projectDesc">Description du projet :</label>
+            <textarea id="projectDesc" rows="4" placeholder="Décrivez brièvement votre besoin..." required></textarea>
+        </div>
+
+        <!-- Le bouton remplace l'ancien lien texte -->
+        <button type="submit">Envoyer les détails sur WhatsApp</button>
+    </form>
+
+    <script>
+        document.getElementById('projectForm').addEventListener('submit', function(event) {
+            // Empêche le rechargement par défaut de la page
+            event.preventDefault();
+
+            // 1. Récupération des valeurs saisies dans le formulaire
+            const nom = document.getElementById('clientName').value;
+            const typeProjet = document.getElementById('projectType').value;
+            const description = document.getElementById('projectDesc').value;
+
+            // 2. Construction du message d'accueil textuel
+            const message = "Bonjour ! Voici les détails de mon projet :\n\n" +
+                            "*Nom :* " + nom + "\n" +
+                            "*Type :* " + typeProjet + "\n" +
+                            "*Description :* " + description;
+
+            // 3. Encodage du message pour le protocole d'URL
+            const messageEncode = encodeURIComponent(message);
+
+            // 4. Numéro de téléphone cible
+            const telephone = "243906391126";
+
+            // 5. Génération et ouverture du lien dynamique
+            window.location.href = "whatsapp://send?phone=" + telephone + "&text=" + messageEncode;
+        });
+    </script>
+
+
+        </div>
+    </section>
+
+    <!-- BOUTON WHATSAPP FIXE EN BAS À DROITE -->
+    <a href="whatsapp://send?phone=243986962634&text=Bonjour%20Univers%20Construction,%20je%20souhaite%20obtenir%20des%20informations%20pour%20un%20projet." class="whatsapp-fixed-btn" title="Contactez-nous sur WhatsApp">
+        <svg class="whatsapp-icon" viewBox="0 0 24 24">
+            <path d="M12.004 2c-5.51 0-9.996 4.486-9.996 9.998 0 1.763.459 3.421 1.258 4.873l-1.266 4.654 4.757-1.248c1.411.765 3.011 1.203 4.71 1.203 5.51 0 9.996-4.486 9.996-9.998C22 6.486 17.514 2 12.004 2zm5.221 14.21c-.22.617-1.285 1.154-1.774 1.218-.44.058-.999.09-2.955-.683-2.503-.987-4.108-3.532-4.232-3.7-.123-.167-1.008-1.34-1.008-2.557 0-1.216.634-1.815.86-2.057.224-.241.493-.302.658-.302.164 0 .329.002.472.009.148.007.348-.056.545.422.2.489.683 1.666.743 1.787.059.122.099.263.019.424-.079.162-.12.263-.239.403-.12.139-.252.311-.359.418-.12.122-.245.254-.105.493.14.24 1.191 1.954 2.56 2.732.51.29.917.463 1.232.563.535.17 1.022.146 1.408.089.43-.064 1.321-.54 1.507-1.061.185-.521.185-.968.129-1.061-.056-.093-.207-.149-.458-.274z"/>
+        </svg>
+    </a>
+
+    <!-- FOOTER / PIED DE PAGE (STYLE CSTB & WHATSAPP) -->
+
+<footer class="main-footer">
+        <div class="footer-container">
+            
+            <!-- Colonne 1 : À propos / Identité -->
+            <div class="footer-col">
+                <h3>Univers Construction</h3>
+                <p>Leader de l'aménagement urbain et de l'ingénierie civile en RDC. Nous concevons des infrastructures durables et des designs d'intérieur d'exception adaptés à vos ambitions.</p>
+                <p style="font-size: 12px; color: #748094;">
+                    RCCM : CD/KNG/RCCM/22-B-01432<br>
+                    Id. Nat. : 01-83-N39402W
+                </p>
+            </div>
+
+            <!-- Colonne 2 : Liens Rapides -->
+            <div class="footer-col">
+    
+            </div>
+
+            <!-- Colonne 3 : Domaines d'Expertise -->
+
+
+            <!-- Colonne 4 : Contacts & Horaires -->
+            <div class="footer-col">
+                <h3>Contact & Siège</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="icon">📍</span>
+                        <span>Croisement Av. Équateur et Blvd du 30 Juin, Gombe, Kinshasa, RDC</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📞</span>
+                        <span>+243 (0) 812 345 678</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">✉️</span>
+                        <span>contact@universconstruction.cd</span>
+                    </div>
+                </div>
+                
+                <h4 style="color: #ffb703; font-size: 14px; margin: 24px 0 8px 0; text-transform: uppercase;">Horaires de réception</h4>
+                <p style="margin: 0;">Lun - Ven : 08h00 - 17h00<br>Samedi : 09h00 - 13h00</p>
+            </div>
+
+        </div>
+
+        <!-- Bas de footer unique -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Univers Construction. Tous droits réservés. Développé pour l'excellence constructive en RDC.</p>
+        </div>
+    </footer>
+
+
+    <!-- SCRIPT POUR TRAITER LE FORMULAIRE DE DEVIS ET LE REDIRIGER SUR WHATSAPP -->
+    <script>
+        function envoyerDevisWhatsApp(event) {
+            event.preventDefault();
+            
+            // Récupération des valeurs du formulaire
+            const nom = document.getElementById('nom').value;
+            const projet = document.getElementById('projet').value;
+            const message = document.getElementById('message').value;
+            
+            // Construction du texte pour WhatsApp
+            const texteWhatsApp = `Bonjour Univers Construction,%0A%0A` +
+                                 `Voici une nouvelle demande de devis :%0A` +
+                                 `• *Nom* : ${encodeURIComponent(nom)}%0A` +
+</script>
+    <!-- BOUTON WHATSAPP FIXE EN BAS À DROITE -->
+    <a href="whatsapp://send?phone=243986962634&text=Bonjour%20Univers%20Construction,%20je%20souhaite%20obtenir%20des%20informations%20pour%20un%20projet." class="whatsapp-fixed-btn" title="Contactez-nous sur WhatsApp">
+        <svg class="whatsapp-icon" viewBox="0 0 24 24">
+            <path d="M12.004 2c-5.51 0-9.996 4.486-9.996 9.998 0 1.763.459 3.421 1.258 4.873l-1.266 4.654 4.757-1.248c1.411.765 3.011 1.203 4.71 1.203 5.51 0 9.996-4.486 9.996-9.998C22 6.486 17.514 2 12.004 2zm5.221 14.21c-.22.617-1.285 1.154-1.774 1.218-.44.058-.999.09-2.955-.683-2.503-.987-4.108-3.532-4.232-3.7-.123-.167-1.008-1.34-1.008-2.557 0-1.216.634-1.815.86-2.057.224-.241.493-.302.658-.302.164 0 .329.002.472.009.148.007.348-.056.545.422.2.489.683 1.666.743 1.787.059.122.099.263.019.424-.079.162-.12.263-.239.403-.12.139-.252.311-.359.418-.12.122-.245.254-.105.493.14.24 1.191 1.954 2.56 2.732.51.29.917.463 1.232.563.535.17 1.022.146 1.408.089.43-.064 1.321-.54 1.507-1.061.185-.521.185-.968.129-1.061-.056-.093-.207-.149-.458-.274z"/>
+        </svg>
+    </a>
+</body>
+</html>

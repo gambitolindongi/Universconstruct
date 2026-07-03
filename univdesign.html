@@ -92,8 +92,7 @@
         <!-- Le bouton remplace l'ancien lien texte -->
         <button type="submit">Envoyer les détails sur WhatsApp</button>
     </form>
-        </section>
-        
+
     <script>
         document.getElementById('projectForm').addEventListener('submit', function(event) {
             // Empêche le rechargement par défaut de la page
@@ -120,6 +119,5 @@
             window.location.href = "whatsapp://send?phone=" + telephone + "&text=" + messageEncode;
         });
     </script>
-
 </body>
 </html>

@@ -57,59 +57,67 @@
 
         <section id="devis">
             <h2>Demande de Projet de Design</h2>
-            <form id="etudeForm">
-                <div class="form-group">
-                    <label for="nom">Nom Complet ou Entreprise</label>
-                    <input type="text" id="nom" required placeholder="Ex: Studio Horizon ou Marie Dupont">
-                </div>
-                <div class="form-group">
-                    <label for="type_etude">Type de Prestation</label>
-                    <select id="type_etude" required>
-                        <option value="">Sélectionnez une option</option>
-                        <option value="Architecture d'Intérieur Complète">Architecture d'Intérieur (Plans & Suivi)</option>
-                        <option value="Modélisation 3D & Planches Tendances">Modélisation 3D & Planches Tendances</option>
-                        <option value="Aménagement et Mobilier Sur Mesure">Aménagement de pièce (Cuisine / Dressing)</option>
-                        <option value="Conseil Déco & Couleurs Avant-Projet">Conseil Déco & Shopping List</option>
+            
+    <form id="projectForm">
+        <div class="form-group">
+            <label Places for="clientName">Nom complet :</label>
+            <input type="text" id="clientName" placeholder="Ex: Jean Mukendi" required>
+        </div>
+
+        <div class="form-group">
+            <label for="projectType">Type de projet :</label>
+            
+                    <select id="projectType" required style="width: 100%; padding: 12px; border: 1px solid #cccccc; border-radius: 2px; font-family: inherit; background-color: #fff;">
+                        <option value="Décoration intérieure">Décoration intérieure</option>
+                        <option value="Étude de terrain">Étude de terrain</option>
+                        <option value="Plan architectural">Plan architectural</option>
+                        <option value="Construction générale">Construction générale</option>
                     </select>
-                </div>
-                <div class="form-group">
-                    <label for="localisation">Localisation du projet</label>
-                    <input type="text" id="localisation" required placeholder="Ex: Ville, Quartier ou Code postal">
-                </div>
-                <div class="form-group">
-                    <label for="message">Détails de votre projet d'intérieur</label>
-                    <textarea id="message" rows="5" required placeholder="Décrivez votre projet (type de pièce, style souhaité, budget approximatif, contraintes d'espace...)"></textarea>
-                </div>
-                <button type="submit">Demander mon étude sur WhatsApp</button>
-            </form>
+            
+      
+            <select id2="projectType" required>
+                <option value="">-- Choisir une option --</option>
+                <option value="Site Web">Site Web / Application</option>
+                <option value="Design Graphique">Design Graphique</option>
+                <option value="Marketing Digital">Marketing Digital</option>
+                <option value="Autre">Autre projet</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="projectDesc">Description du projet :</label>
+            <textarea id="projectDesc" rows="4" placeholder="Décrivez brièvement votre besoin..." required></textarea>
+        </div>
+
+        <!-- Le bouton remplace l'ancien lien texte -->
+        <button type="submit">Envoyer les détails sur WhatsApp</button>
+    </form>
         </section>
-
-    </div>
-
-    <!-- Script JavaScript pour l'envoi WhatsApp -->
+        
     <script>
-        document.getElementById('etudeForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Indiquez votre numéro WhatsApp au format international (sans le + ni les 00)
-            const numeroWhatsApp = 'XXXXXXXXXX'; 
-            
-            const nom = document.getElementById('nom').value;
-            const prestation = document.getElementById('type_etude').value;
-            const localite = document.getElementById('localisation').value;
-            const description = document.getElementById('message').value;
-            
-            const messageTexte = `Bonjour Univers Design,\n\n` +
-                                 `Je souhaite planifier un projet de design d'intérieur :\n\n` +
-                                 `• *Client :* ${nom}\n` +
-                                 `• *Prestation :* ${prestation}\n` +
-                                 `• *Localisation :* ${localite}\n` +
-                                 `• *Projet prévu :* ${description}`;
-            
-            const messageEncode = encodeURIComponent(messageTexte);
-            const urlWhatsApp = `https://wa.me{numeroWhatsApp}?text=${messageEncode}`;
-            
-            window.open(urlWhatsApp, '_blank');
+        document.getElementById('projectForm').addEventListener('submit', function(event) {
+            // Empêche le rechargement par défaut de la page
+            event.preventDefault();
+
+            // 1. Récupération des valeurs saisies dans le formulaire
+            const nom = document.getElementById('clientName').value;
+            const typeProjet = document.getElementById('projectType').value;
+            const description = document.getElementById('projectDesc').value;
+
+            // 2. Construction du message d'accueil textuel
+            const message = "Bonjour ! Voici les détails de mon projet :\n\n" +
+                            "*Nom :* " + nom + "\n" +
+                            "*Type :* " + typeProjet + "\n" +
+                            "*Description :* " + description;
+
+            // 3. Encodage du message pour le protocole d'URL
+            const messageEncode = encodeURIComponent(message);
+
+            // 4. Numéro de téléphone cible
+            const telephone = "243906391126";
+
+            // 5. Génération et ouverture du lien dynamique
+            window.location.href = "whatsapp://send?phone=" + telephone + "&text=" + messageEncode;
         });
     </script>
 

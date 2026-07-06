@@ -89,80 +89,71 @@
             </div>
 
         </div>
+<section id="devis">
+            <h2>Demande de Projet de Design</h2>
+            
+<form id="projectForm">
+        <div class="form-group">
+            <label Places for="clientName">Nom complet :</label>
+            <input type="text" id="clientName" placeholder="Ex: Jean Mukendi" required>
+        </div>
 
-        <!-- Formulaire de Contact Centralisé -->
-        <section id="devis">
-            <h2 style="text-align: center; margin-top: 0;">Formulaire de Projet Unique</h2>
-            <form id="etudeForm">
-                <div class="form-group">
-                    <label for="nom">Nom Complet ou Entreprise</label>
-                    <input type="text" id="nom" required placeholder="Ex: Groupe Horizon ou Jean Dupont">
-                </div>
-                <div class="form-group">
-                    <label for="type_etude">Sélectionnez la Prestation Souhaitée</label>
-                    <select id="type_etude" required>
-                        <option value="">Choisissez un domaine...</option>
-                        <optgroup label="Étude de Terrain & Sol">
-                            <option value="Étude Géotechnique (G1 / G2)">Étude Géotechnique (G1 / G2)</option>
-                            <option value="Relevé Topographique">Relevé Topographique & Altimétrique</option>
-                            <option value="Analyse de Sol Unique">Analyse de sol (Pollution / Portance)</option>
-                        </optgroup>
-                        <optgroup label="Design & Architecture d'Intérieur">
-                            <option value="Architecture d'Intérieur Complète">Architecture d'Intérieur (Plans & Suivi)</option>
-                            <option value="Modélisation 3D">Modélisation 3D & Planches Tendances</option>
-                            <option value="Mobilier Sur Mesure">Aménagement & Mobilier Sur Mesure</option>
-                        </optgroup>
-                        <optgroup label="Plans & Urbanisme">
-                            <option value="Dossier Permis de Construire">Plans complets (Permis de Construire)</option>
-                            <option value="Plans d'Avant-Projet 2D/3D">Modélisation 3D & Plans d'Avant-Projet</option>
-                            <option value="Plan d'Extension">Plan d'Extension ou de Rénovation</option>
-                        </optgroup>
-                        <optgroup label="Suivi & Pilotage de Travaux">
-                            <option value="Suivi de Chantier Complet">Suivi de chantier (Maîtrise d'œuvre)</option>
-                            <option value="Coordination OPC">Planification & Coordination (OPC)</option>
-                            <option value="Assistance Réception Chantier">Assistance à la réception de chantier</option>
-                        </optgroup>
+        <div class="form-group">
+            <label for="projectType">Type de projet :</label>
+            
+                    <select id="projectType" required style="width: 100%; padding: 12px; border: 1px solid #cccccc; border-radius: 2px; font-family: inherit; background-color: #fff;">
+                        <option value="Décoration intérieure">Décoration intérieure</option>
+                        <option value="Étude de terrain">Étude de terrain</option>
+                        <option value="Plan architectural">Plan architectural</option>
+                        <option value="Construction générale">Construction générale</option>
                     </select>
-                </div>
-                <div class="form-group">
-                    <label for="localisation">Localisation du projet</label>
-                    <input type="text" id="localisation" required placeholder="Ex: Ville, Code postal ou adresse">
-                </div>
-                <div class="form-group">
-                    <label for="message">Description détaillée de vos besoins</label>
-                    <textarea id="message" rows="5" required placeholder="Expliquez votre projet en quelques mots (dimensions, contraintes, attentes particulières...)"></textarea>
-                </div>
-                <button type="submit">Envoyer ma demande sur WhatsApp</button>
-            </form>
-        </section>
+            
+      
+            <select id2="projectType" required>
+                <option value="">-- Choisir une option --</option>
+                <option value="Site Web">Site Web / Application</option>
+                <option value="Design Graphique">Design Graphique</option>
+                <option value="Marketing Digital">Marketing Digital</option>
+                <option value="Autre">Autre projet</option>
+            </select>
+        </div>
 
-    </div>
+        <div class="form-group">
+            <label for="projectDesc">Description du projet :</label>
+            <textarea id="projectDesc" rows="4" placeholder="Décrivez brièvement votre besoin..." required></textarea>
+        </div>
 
-    <!-- Script JavaScript pour l'envoi WhatsApp -->
+        <!-- Le bouton remplace l'ancien lien texte -->
+        <button type="submit">Envoyer les détails sur WhatsApp</button>
+    </form>
+
     <script>
-        document.getElementById('etudeForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const numeroWhatsApp = 'XXXXXXXXXX'; 
-            
-            const nom = document.getElementById('nom').value;
-            const prest = document.getElementById('type_etude').value;
-            const localite = document.getElementById('localisation').value;
-            const desc = document.getElementById('message').value;
-            
-            const messageTexte = `Bonjour Univers Groupe,\n\n` +
-                                 `Nouvelle demande de projet centralisée :\n\n` +
-                                 `• *Client :* ${nom}\n` +
-                                 `• *Prestation :* ${prest}\n` +
-                                 `• *Localisation :* ${localite}\n` +
-                                 `• *Description :* ${desc}`;
-            
-            const messageEncode = encodeURIComponent(messageTexte);
-            const urlWhatsApp = `https://wa.me{numeroWhatsApp}?text=${messageEncode}`;
-            
-            window.open(urlWhatsApp, '_blank');
+        document.getElementById('projectForm').addEventListener('submit', function(event) {
+            // Empêche le rechargement par défaut de la page
+            event.preventDefault();
+
+            // 1. Récupération des valeurs saisies dans le formulaire
+            const nom = document.getElementById('clientName').value;
+            const typeProjet = document.getElementById('projectType').value;
+            const description = document.getElementById('projectDesc').value;
+
+            // 2. Construction du message d'accueil textuel
+            const message = "Bonjour ! Voici les détails de mon projet :\n\n" +
+                            "*Nom :* " + nom + "\n" +
+                            "*Type :* " + typeProjet + "\n" +
+                            "*Description :* " + description;
+
+            // 3. Encodage du message pour le protocole d'URL
+            const messageEncode = encodeURIComponent(message);
+
+            // 4. Numéro de téléphone cible
+            const telephone = "243906391126";
+
+            // 5. Génération et ouverture du lien dynamique
+            window.location.href = "whatsapp://send?phone=" + telephone + "&text=" + messageEncode;
         });
     </script>
+        
 
 </body>
 </html>

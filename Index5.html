@@ -289,9 +289,165 @@
 --------------
 
     
+<section id="devis">
+    <h2>Demande de Projet de Design</h2>
+    
+    <style>
+        /* Conteneur principal du formulaire */
+        #projectForm {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        /* Titre de la section */
+        #devis h2 {
+            text-align: center;
+            color: #002F56;
+            margin-bottom: 30px;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Grille responsive pour aligner Nom et Type sur PC */
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Chaque groupe de champ prend 50% de la largeur sur PC */
+        .form-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Le groupe de la description prendra toute la largeur */
+        .form-group.full-width {
+            margin-bottom: 25px;
+        }
+
+        label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333333;
+            font-size: 14px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            font-size: 15px;
+            background-color: #ffffff;
+            box-sizing: border-box;
+            transition: border-color 0.2s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #25D366;
+            outline: none;
+        }
+
+        /* Style du bouton WhatsApp */
+        button[type="submit"] {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #128C7E;
+        }
+
+        button[type="submit"]:active {
+            transform: scale(0.99);
+        }
+
+        /* Adaptabilité pour les téléphones portables (Écrans inférieurs à 768px) */
+        @media (max-width: 768px) {
+            .form-row {
+                flex-direction: column;
+                gap: 15px;
+                margin-bottom: 15px;
+            }
+            #projectForm {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+
+    <form id="projectForm">
+        <!-- Rangée à 2 colonnes sur PC (Nom + Type) -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="clientName">Nom complet :</label>
+                <input type="text" id="clientName" placeholder="Ex: Jean Mukendi" required>
+            </div>
+
+            <div class="form-group">
+                <label for="projectType">Type de projet :</label>
+                <select id="projectType" required>
+                    <option value="">-- Choisir une option --</option>
+                    <option value="Décoration intérieure">Décoration intérieure</option>
+                    <option value="Étude de terrain">Étude de terrain</option>
+                    <option value="Plan architectural">Plan architectural</option>
+                    <option value="Construction générale">Construction générale</option>
+                    <option value="Site Web">Site Web / Application</option>
+                    <option value="Design Graphique">Design Graphique</option>
+                    <option value="Marketing Digital">Marketing Digital</option>
+                    <option value="Autre">Autre projet</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Champ en pleine largeur pour la description -->
+        <div class="form-group full-width">
+            <label for="projectDesc">Description du projet :</label>
+            <textarea id="projectDesc" rows="5" placeholder="Décrivez brièvement votre besoin..." required></textarea>
+        </div>
+
+        <button type="submit">Envoyer les détails sur WhatsApp</button>
+    </form>
+
+    <script>
+        document.getElementById('projectForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const nom = document.getElementById('clientName').value;
+            const typeProjet = document.getElementById('projectType').value;
+            const description = document.getElementById('projectDesc').value;
+
+            const message = "Bonjour ! Voici les détails de mon projet :\n\n" +
+                            "*Nom :* " + nom + "\n" +
+                            "*Type :* " + typeProjet + "\n" +
+                            "*Description :* " + description;
+
+            const messageEncode = encodeURIComponent(message);
+            const telephone = "243906391126";
+
+            // Utilisation de l'API web universelle https://wa.me (Ouvre WhatsApp Web sur PC ou l'application sur Mobile)
+            window.open("https://wa.me" + telephone + "?text=" + messageEncode, '_blank');
+        });
+    </script>
+</section>
 
             
-
+-----------'
 
 
     <!-- BOUTON WHATSAPP FIXE EN BAS À DROITE -->

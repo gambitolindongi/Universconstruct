@@ -390,60 +390,6 @@
             }
         }
     </style>
-
-    <form id="projectForm">
-        <!-- Rangée à 2 colonnes sur PC (Nom + Type) -->
-        <div class="form-row">
-            <div class="form-group">
-                <label for="clientName">Nom complet :</label>
-                <input type="text" id="clientName" placeholder="Ex: Jean Mukendi" required>
-            </div>
-
-            <div class="form-group">
-                <label for="projectType">Type de projet :</label>
-                <select id="projectType" required>
-                    <option value="">-- Choisir une option --</option>
-                    <option value="Décoration intérieure">Décoration intérieure</option>
-                    <option value="Étude de terrain">Étude de terrain</option>
-                    <option value="Plan architectural">Plan architectural</option>
-                    <option value="Construction générale">Construction générale</option>
-                    <option value="Site Web">Site Web / Application</option>
-                    <option value="Design Graphique">Design Graphique</option>
-                    <option value="Marketing Digital">Marketing Digital</option>
-                    <option value="Autre">Autre projet</option>
-                </select>
-            </div>
-        </div>
-
-        <!-- Champ en pleine largeur pour la description -->
-        <div class="form-group full-width">
-            <label for="projectDesc">Description du projet :</label>
-            <textarea id="projectDesc" rows="5" placeholder="Décrivez brièvement votre besoin..." required></textarea>
-        </div>
-
-        <button type="submit">Envoyer les détails sur WhatsApp</button>
-    </form>
-
-    <script>
-        document.getElementById('projectForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const nom = document.getElementById('clientName').value;
-            const typeProjet = document.getElementById('projectType').value;
-            const description = document.getElementById('projectDesc').value;
-
-            const message = "Bonjour ! Voici les détails de mon projet :\n\n" +
-                            "*Nom :* " + nom + "\n" +
-                            "*Type :* " + typeProjet + "\n" +
-                            "*Description :* " + description;
-
-            const messageEncode = encodeURIComponent(message);
-            const telephone = "243906391126";
-
-            // Utilisation de l'API web universelle https://wa.me (Ouvre WhatsApp Web sur PC ou l'application sur Mobile)
-            window.open("https://wa.me" + telephone + "?text=" + messageEncode, '_blank');
-        });
-    </script>
 </section>
 
             

@@ -132,75 +132,106 @@ h2 {
     text-align: justify;
 }
 
-/* Formulaire Responsive */
-form {
-    background: var(--white);
-    padding: 25px 20px; /* Plus compact sur Android */
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
+ 
+    
+    
+        /* Conteneur principal du formulaire */
+        #projectForm {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
 
-.form-group {
-    margin-bottom: 18px;
-}
+        /* Titre de la section */
+        #devis h2 {
+            text-align: center;
+            color: #002F56;
+            margin-bottom: 30px;
+            font-size: 24px;
+            text-transform: uppercase;
 
-label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--primary);
-}
+            letter-spacing: 0.5px;
+        }
 
-input, select, textarea {
-    width: 100%;
-    padding: 11px 14px; /* Hauteur ajustée pour le confort tactile */
-    border: 1px solid #cbd5e0;
-    border-radius: 6px;
-    font-size: 0.95rem; /* Police homogène */
-    color: var(--dark);
-    background-color: var(--white);
-    transition: var(--transition);
-    -webkit-appearance: none; /* Évite les styles forcés par d'anciens navigateurs Android */
-}
+        /* Grille responsive pour aligner Nom et Type sur PC */
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
 
-input:focus, select:focus, textarea:focus {
-    outline: none;
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(26, 54, 93, 0.1);
-}
+        /* Chaque groupe de champ prend 50% de la largeur sur PC */
+        .form-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
 
-/* Bouton WhatsApp Uniforme */
-#devisForm button[type="submit"] {
-    background-color: var(--whatsapp);
-    color: var(--white);
-    border: none;
-    padding: 14px 20px;
-    font-size: 1.05rem; /* Taille équilibrée */
-    font-weight: bold;
-    border-radius: 6px;
-    cursor: pointer;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    transition: var(--transition);
-}
+        /* Le groupe de la description prendra toute la largeur */
+        .form-group.full-width {
+            margin-bottom: 25px;
+        }
 
-#devisForm button[type="submit"]:hover {
-    background-color: var(--whatsapp-hover);
-}
+        label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333333;
+            font-size: 14px;
+        }
 
-#devisForm button[type="submit"]:active {
-    transform: scale(0.98); /* Effet d'enfoncement au clic tactile */
-}
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            font-size: 15px;
+            background-color: #ffffff;
+            box-sizing: border-box;
+            transition: border-color 0.2s;
+        }
 
-#devisForm button[type="submit"]::before {
-    content: "💬";
-    font-size: 1.1rem;
-}
+        input:focus, select:focus, textarea:focus {
+            border-color: #25D366;
+            outline: none;
+        }
 
+        /* Style du bouton WhatsApp */
+        button[type="submit"] {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #128C7E;
+        }
+
+        button[type="submit"]:active {
+            transform: scale(0.99);
+        }
+
+        /* Adaptabilité pour les téléphones portables (Écrans inférieurs à 768px) */
+        @media (max-width: 768px) {
+            .form-row {
+                flex-direction: column;
+                gap: 15px;
+                margin-bottom: 15px;
+            }
+            #projectForm {
+                padding: 20px 15px;
+            }
+        }
 /* Pied de page */
 footer {
     background-color: var(--primary);

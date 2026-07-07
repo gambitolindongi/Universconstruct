@@ -221,12 +221,18 @@ content://com.android.externalstorage.documents/tree/primary%3ADocuments%2FSite%
     line-height: 1.6;
 }
 
-/* PALETTE DES 5 COULEURS CLAIRES INSTITUTIONNELLES */
+/* ==========================================================================
+   4. MISE A JOUR PALETTE DE COULEURS CLAIRES (GRID 2)
+   ========================================================================== */
 .card-clr-1 { background-color: #F0F4F8; border-top: 4px solid #002F56; color: #002F56; } /* Bleu Glace */
-.card-clr-2 { background-color: #E6F3FF; border-top: 4px solid #007AD9; color: #007AD9; } /* Bleu Ciel Douceur */
-.card-clr-3 { background-color: #FFF3F0; border-top: 4px solid #D9381E; color: #D9381E; } /* Ambre Clair */
-.card-clr-4 { background-color: #F4F9F4; border-top: 4px solid #2E7D32; color: #2E7D32; } /* Vert Éco Léger */
+.card-clr-2 { background-color: #E6F3FF; border-top: 4px solid #007AD9; color: #007AD9; } /* Bleu Ciel */
+/* Mise à jour de la troisième couleur : Rouge clair / Rose pastel institutionnel très doux */
+.card-clr-3 { background-color: #FFF2F2; border-top: 4px solid #D9381E; color: #D9381E; } 
+.card-clr-4 { background-color: #F4F9F4; border-top: 4px solid #2E7D32; color: #2E7D32; } /* Vert Éco */
 .card-clr-5 { background-color: #FDF9F0; border-top: 4px solid #F59E0B; color: #F59E0B; } /* Sable Chaud */
+
+
+
 
 /* EFFET HOVER */
 .swipe-link:hover .swipe-card {
@@ -526,16 +532,6 @@ content://com.android.externalstorage.documents/tree/primary%3ADocuments%2FSite%
     }
 }
  
-/* ==========================================================================
-   4. MISE A JOUR PALETTE DE COULEURS CLAIRES (GRID 2)
-   ========================================================================== */
-.card-clr-1 { background-color: #F0F4F8; border-top: 4px solid #002F56; color: #002F56; } /* Bleu Glace */
-.card-clr-2 { background-color: #E6F3FF; border-top: 4px solid #007AD9; color: #007AD9; } /* Bleu Ciel */
-/* Mise à jour de la troisième couleur : Rouge clair / Rose pastel institutionnel très doux */
-.card-clr-3 { background-color: #FFF2F2; border-top: 4px solid #D9381E; color: #D9381E; } 
-.card-clr-4 { background-color: #F4F9F4; border-top: 4px solid #2E7D32; color: #2E7D32; } /* Vert Éco */
-.card-clr-5 { background-color: #FDF9F0; border-top: 4px solid #F59E0B; color: #F59E0B; } /* Sable Chaud */
-
 
 
 

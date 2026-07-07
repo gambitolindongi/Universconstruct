@@ -640,4 +640,38 @@ content://com.android.externalstorage.documents/tree/primary%3ADocuments%2FSite%
 
 
 
+    
+
+        /* STYLE DU BOUTON WHATSAPP FLOTTANT (FIXÉ EN BAS À DROITE) */
+        .whatsapp-fixed-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        /* Effet au survol du bouton */
+        .whatsapp-fixed-btn:hover {
+            transform: scale(1.1);
+            background-color: #128C7E;
+        }
+
+        /* Icône WhatsApp simplifiée en SVG (Pas besoin de charger une bibliothèque externe) */
+        .whatsapp-icon {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+    
  

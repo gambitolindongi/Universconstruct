@@ -434,33 +434,7 @@ content://com.android.externalstorage.documents/tree/primary%3ADocuments%2FSite%
     }
 }
 
-/* GRID 5 : INDICATEURS CLÉS 
-.grid-5 {
-    width: 100%;
-    background-color: #002F56;
-    display: flex;
-    flex-wrap: wrap;
-}
-.indicator-col {
-    flex: 1;
-    min-width: 160px;
-    border-right: 1px solid rgba(255,255,255,0.08);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #ffffff;
-    padding: 45px 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 13px;
-    letter-spacing: 0.5px;
-}
-.indicator-col:last-child {
-    border-right: none;
-}
-*/
+
 /* FORMULAIRE HOVER ET FOCUS STYLE CSTB */
 #devis-form button:hover {
     background-color: #005FA8 !important;
@@ -563,121 +537,7 @@ content://com.android.externalstorage.documents/tree/primary%3ADocuments%2FSite%
 .card-clr-5 { background-color: #FDF9F0; border-top: 4px solid #F59E0B; color: #F59E0B; } /* Sable Chaud */
 
 
-/* ==========================================================================
-   9. FOOTER & BOUTON INTEGRATION WHATSAPP
-   ========================================================================== */
-.main-footer {
-    background-color: #002F56; /* Rappel du Bleu Profond de la page */
-    color: #ffffff;
-    padding: 60px 20px 20px 20px;
-    font-family: 'Roboto', sans-serif;
-}
 
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: space-between;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 40px;
-}
 
-.footer-brand {
-    flex: 1 1 300px;
-}
-
-.footer-logo {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 22px;
-    font-weight: 700;
-    color: #ffffff;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: -0.5px;
-    display: block;
-    margin-bottom: 15px;
-}
-
-é.footer-brand p {
-    color: #BACAD6; /* Gris bleuté clair pour une excellente lisibilité sur fond sombre */
-    font-size: 13.5px;
-    line-height: 1.6;
-}
-
-.footer-links {
-    flex: 1 1 200px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer-links h4, .footer-contact h4 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: #ffffff;
-}
-
-.footer-links a {
-    color: #BACAD6;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.2s ease;
-}
-
-.footer-links a:hover {
-    color: #007AD9; /* Survol bleu vif */
-}
-
-.footer-contact {
-    flex: 1 1 250px;
-}
-
-/* STYLE DU BOUTON WHATSAPP */
-.whatsapp-sticky-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    background-color: #25D366; /* Vert officiel WhatsApp */
-    color: #ffffff;
-    text-decoration: none;
-    padding: 12px 20px;
-    border-radius: 4px;
-    font-weight: 700;
-    font-size: 14px;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
-    transition: transform 0.25s ease, background-color 0.25s ease;
-}
-
-.whatsapp-sticky-btn:hover {
-    background-color: #1ebd58;
-    transform: translateY(-2px);
-}
-
-.whatsapp-icon {
-    width: 20px;
-    height: 20px;
-    fill: #ffffff;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-    color: #BACAD6;
-    font-size: 12px;
-}
-
-/* AJUSTEMENT DU RESPONSIVE POUR LE FOOTER */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        gap: 30px;
-    }
-}
 
  
